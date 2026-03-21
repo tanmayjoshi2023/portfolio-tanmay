@@ -19,35 +19,50 @@ export default function Certificates() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {portfolioData.certificates.map((cert, index) => (
             <motion.div
               key={cert.title}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               onClick={() => setSelectedCert(cert)}
-              className="cursor-pointer group bg-card border border-border rounded-2xl overflow-hidden hover:border-accent transition-all flex flex-col h-full"
+              className="cursor-pointer group relative bg-card/40 backdrop-blur-md border border-border/50 rounded-[2rem] overflow-hidden hover:border-accent/40 transition-all duration-500 flex flex-col h-full shadow-lg hover:shadow-2xl hover:shadow-accent/5"
             >
-              <div className="aspect-[4/3] bg-background/50 relative overflow-hidden flex items-center justify-center border-b border-border">
-                <img 
-                    src={cert.imageUrl} 
-                    alt={cert.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    onError={(e) => {
-                        (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(cert.title)}&background=2563EB&color=fff&size=256`;
-                    }}
-                />
-                <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors" />
+              <div className="aspect-[4/3] bg-muted/20 relative overflow-hidden flex items-center justify-center p-4">
+                <div className="w-full h-full rounded-2xl overflow-hidden shadow-inner bg-background/50">
+                  <img 
+                      src={cert.imageUrl} 
+                      alt={cert.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      onError={(e) => {
+                          (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(cert.title)}&background=2563EB&color=fff&size=512`;
+                      }}
+                  />
+                </div>
+                <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/5 transition-colors duration-500" />
+                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white/10 backdrop-blur-md p-2 rounded-full border border-white/20">
+                  <ExternalLink className="w-4 h-4 text-white" />
+                </div>
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-base font-bold text-foreground mb-2 line-clamp-2 min-h-[3rem]">
+              <div className="p-8 flex flex-col flex-grow">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <Award className="w-4 h-4 text-accent" />
+                  </div>
+                </div>
+                <h3 className="text-sm font-black text-foreground mb-3 line-clamp-2 min-h-[2.5rem] leading-snug group-hover:text-accent transition-colors">
                   {cert.title}
                 </h3>
-                <p className="text-xs text-secondary-text mt-auto font-medium">
-                  {cert.issuer} • {cert.date}
-                </p>
+                <div className="mt-auto pt-4 border-t border-border/30 flex justify-between items-center">
+                  <span className="text-[10px] font-bold text-secondary-text uppercase tracking-widest leading-none">
+                    {cert.issuer}
+                  </span>
+                  <span className="text-[10px] text-accent font-black">
+                    {cert.date}
+                  </span>
+                </div>
               </div>
             </motion.div>
           ))}

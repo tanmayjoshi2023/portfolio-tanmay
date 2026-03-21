@@ -20,37 +20,46 @@ export default function Projects() {
           {portfolioData.projects.map((project: Project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-accent/5 hover:-translate-y-1 transition-all flex flex-col h-full"
+              className="group relative bg-card/40 backdrop-blur-md border border-border/50 rounded-3xl overflow-hidden hover:border-accent/40 transition-all duration-500 flex flex-col h-full shadow-lg hover:shadow-2xl hover:shadow-accent/5"
             >
+              {project.featured && (
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[10px] font-black uppercase tracking-widest rounded-full backdrop-blur-md">
+                    Featured
+                  </span>
+                </div>
+              )}
+
               <div className="p-8 flex-grow">
-                <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors">
+                <h3 className="text-2xl font-bold text-foreground mb-6 group-hover:text-accent transition-colors leading-tight">
                   {project.title}
                 </h3>
                 
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <p className="text-xs font-bold text-accent uppercase tracking-wider mb-1">Problem</p>
+                <div className="space-y-6 mb-8">
+                  <div className="relative overflow-hidden">
+                    <p className="text-[10px] font-black text-accent uppercase tracking-[0.2em] mb-2 opacity-60">The Challenge</p>
                     <p className="text-sm text-secondary-text leading-relaxed">
                       {project.description.problem}
                     </p>
                   </div>
-                  <div>
-                    <p className="text-xs font-bold text-accent uppercase tracking-wider mb-1">Solution</p>
-                    <p className="text-sm text-foreground leading-relaxed">
+                  
+                  <div className="p-4 bg-accent/5 rounded-2xl border border-accent/10 group-hover:bg-accent/10 transition-colors duration-500">
+                    <p className="text-[10px] font-black text-accent uppercase tracking-[0.2em] mb-2">The Solution</p>
+                    <p className="text-sm text-foreground leading-relaxed font-medium">
                       {project.description.solution}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-background text-[10px] font-bold text-secondary-text rounded border border-border uppercase tracking-tight"
+                      className="px-2.5 py-1 bg-secondary/30 text-[9px] font-bold text-secondary-text rounded-lg border border-border/50 uppercase tracking-wider"
                     >
                       {tech}
                     </span>
@@ -58,16 +67,16 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="px-8 py-6 bg-background/50 border-t border-border flex items-center justify-between">
+              <div className="px-8 py-6 bg-secondary/10 dark:bg-accent/5 border-t border-border/30 flex items-center gap-6">
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-medium text-secondary-text hover:text-accent transition-colors"
+                    className="flex items-center gap-2 text-xs font-bold text-secondary-text hover:text-accent transition-all duration-300 transform hover:-translate-y-0.5"
                   >
                     <Github className="w-4 h-4" />
-                    Codebase
+                    Source Code
                   </a>
                 )}
                 {project.liveUrl && (
@@ -75,9 +84,9 @@ export default function Projects() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+                    className="flex items-center gap-2 text-xs font-bold text-accent hover:opacity-80 transition-all duration-300 transform hover:-translate-y-0.5"
                   >
-                    Live Demo
+                    Live Preview
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 )}

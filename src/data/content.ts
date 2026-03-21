@@ -103,6 +103,25 @@ export const portfolioData: PortfolioData = {
       githubUrl: "https://github.com/tanmayjoshi2023",
     },
     {
+      title: "TrendPulse",
+      description: {
+        problem: "Users often find it difficult to track and compare real-time global search trends across different regions and categories.",
+        solution: "Developed a real-time data visualization platform that tracks worldwide trending searches. Implemented dynamic charts and regional filtering to provide insights similar to Google Trends, making search data accessible and interactive.",
+      },
+      techStack: ["React", "Next.js", "Tailwind CSS", "Recharts", "Lucide Icons"],
+      githubUrl: "https://github.com/tanmayjoshi2023",
+      featured: true,
+    },
+    {
+      title: "Computer Deadlock Detection System",
+      description: {
+        problem: "Deadlocks in multi-process Operating Systems can stall resources and crash environments if not detected and resolved early.",
+        solution: "Designed and implemented a simulation tool for Deadlock Detection using the Banker's Algorithm and Wait-for-Graph analysis. The system provides visual feedback on resource allocation and process states to prevent system-wide freezes.",
+      },
+      techStack: ["Python", "OS Algorithms", "Resource Management", "Data Structures"],
+      githubUrl: "https://github.com/tanmayjoshi2023",
+    },
+    {
       title: "SCR Efficiency in Powerplants",
       description: {
         problem: "Managing and monitoring NOx emissions in power plants required a dynamic, real-time solution.",
