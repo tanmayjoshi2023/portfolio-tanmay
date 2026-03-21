@@ -154,11 +154,11 @@ export const chatbotData: QuickResponse[] = [
 
   // TECHNICAL SKILLS - Languages
   {
-    keywords: ["programming languages", "coding languages"],
-    response: "Tanmay is proficient in **Python**, **C++**, **Java**, **JavaScript**, and **TypeScript**."
+    keywords: ["programming languages", "coding languages", "what languages do you know"],
+    response: "Tanmay is proficient in a wide range of languages including **Python**, **C++**, **Java**, **C**, **JavaScript**, and **TypeScript**. 💻"
   },
   {
-    keywords: ["python expert", "experience in python"],
+    keywords: ["python expert", "experience in python", "python score"],
     response: "Python is his primary language for AI and ML. He scored a **98% Grade** in Google's Python Crash Course! 🐍"
   },
   {
@@ -218,36 +218,80 @@ export const chatbotData: QuickResponse[] = [
 
   // CERTIFICATIONS
   {
-    keywords: ["certifications", "extra courses"],
-    response: "Tanmay holds over 10 professional certifications from **Google**, **IBM**, **Coursera**, and **Infosys**."
+    keywords: ["certifications", "extra courses", "what have you studied", "certified in"],
+    response: "Tanmay holds over 10 professional certifications from **Google**, **IBM**, **Coursera**, **Infosys**, and **Udemy**. These cover Python, AI, Networking, and Operating Systems."
   },
   {
-    keywords: ["google certification"],
-    response: "He has multiple Google certifications, including the **Crash Course on Python** (with a 98% score) and **Computer Networking**."
+    keywords: ["google certification", "google courses"],
+    response: "He has multiple Google certifications, including the **Crash Course on Python** (with a 98% score) and **The Bits and Bytes of Computer Networking**."
   },
   {
-    keywords: ["ibm certification"],
+    keywords: ["ibm certification", "ibm hardware", "ibm os"],
     response: "He is certified by **IBM** in **Introduction to Hardware and Operating Systems**."
   },
   {
-    keywords: ["infosys certifications", "springboard"],
-    response: "From Infosys Springboard, he has certifications in **ChatGPT-4 Prompt Engineering**, **Generative AI**, and **Computational Theory**."
+    keywords: ["infosys certifications", "springboard", "infosys courses"],
+    response: "From Infosys Springboard, he has certifications in **ChatGPT-4 Prompt Engineering**, **Generative AI**, **Computational Theory**, and **No-Code AI Solutions**."
+  },
+  {
+    keywords: ["digital systems", "digital systems certification", "logic gates course", "barcelona university"],
+    response: "He is certified in **Digital Systems: From Logic Gates to Processors** by the **Universitat Autònoma de Barcelona**."
+  },
+  {
+    keywords: ["packet switching", "packet switching certification", "networking algorithms", "colorado university"],
+    response: "He holds a certification in **Packet Switching Networks and Algorithms** from the **University of Colorado System**."
+  },
+  {
+    keywords: ["network communication", "network communication certification", "networking fundamentals"],
+    response: "He is certified in **Fundamentals of Network Communication** by the **University of Colorado System**."
+  },
+  {
+    keywords: ["udemy certification", "generative ai course"],
+    response: "He is certified in **Master Generative AI & Generative AI tools** from **Udemy**."
   },
 
   // ACHIEVEMENTS
   {
-    keywords: ["hackathon winner", "cyber security prize"],
-    response: "He secured the **3rd Position** in a college-level **Cyber Security Hackathon**! 🏆"
+    keywords: ["achievements", "awards", "prizes", "accomplishments", "recognition", "what have you achieved"],
+    response: "Tanmay has several key achievements:\n\n• **3rd position** in the Cyber Security Hackathon 🏆\n• **Algorithmic Excellence** recognition at LPU\n• **Project Innovation** for building multiple ML/Web apps\n• **Competitive Programming** success since 2023"
   },
   {
-    keywords: ["algorithmic excellence", "coding contests"],
-    response: "Tanmay is recognized for **Algorithmic Excellence** at LPU and is a consistent participant in competitive programming."
+    keywords: ["hackathon winner", "cyber security prize", "hackathon position"],
+    response: "He secured the **3rd Position** in a college-level **Cyber Security Hackathon**, demonstrating skills in vulnerability assessment and network security! 🏆"
+  },
+  {
+    keywords: ["algorithmic excellence", "coding excellence", "complexity optimization"],
+    response: "Tanmay is recognized for **Algorithmic Excellence** at LPU, focusing on high-performance problem solving and time complexity optimization."
+  },
+  {
+    keywords: ["project innovation", "academic projects", "flask projects"],
+    response: "His **Project Innovation** achievement highlights his work building multiple academic and personal projects in Machine Learning and Web Development using Python, Flask, and various APIs."
+  },
+  {
+    keywords: ["competitive programming", "coding contests", "technical assessments"],
+    response: "He has been active in **Competitive Programming** since August 2023, participating in numerous coding contests and technical assessments."
   },
 
   // PERSONAL & INTERESTS
   {
-    keywords: ["hobbies", "interest", "what do you do"],
-    response: "Outside of coding, Tanmay enjoys exploring new AI tools, contributing to open-source projects, and staying updated with the latest in tech."
+    keywords: ["hobbies", "interest", "what do you do", "free time", "leisure"],
+    response: "Outside of coding, Tanmay has a diverse range of interests:\n\n• **Reading**: He's currently into **Self-Improvement** books.\n• **Travelling**: He loves visiting **Hilly Places** to recharge.\n• **Music**: He enjoys **Qawwalis**, though his taste varies with his mood.\n• **Poetry**: He is currently learning the art of **Poetry**!\n\nHe also enjoys exploring new AI tools and contributing to open-source projects."
+  },
+  {
+    keywords: ["reading", "books", "favorite book", "what do you read"],
+    response: "Tanmay is currently focused on **Self-Improvement** books. He loves reading things that help him grow personally and professionally."
+  },
+  {
+    keywords: ["travelling", "travel", "explore", "mountains", "hills", "hilly places"],
+    response: "He is a big fan of **Hilly Places**. There's something about the mountains that he finds incredibly refreshing and inspiring."
+  },
+  {
+    keywords: ["music", "listening to music", "songs", "qawwalis", "qwallies"],
+    response: "His current favorite genre is **Qawwali**. However, his musical taste is quite dynamic and often depends on his mood at the time!"
+  },
+  {
+    keywords: ["learning new skills", "non-technical skills", "growth mindset", "poetry", "poems"],
+    response: "Tanmay is a lifelong learner. Currently, he is focused on learning **Poetry**! He enjoys picking up skills that are completely different from his technical field."
   },
   {
     keywords: ["why ai", "why machine learning"],
@@ -352,8 +396,8 @@ export const chatbotData: QuickResponse[] = [
     response: "Yes, **Java** is part of his core language toolkit, learned during his university studies."
   },
   {
-    keywords: ["does he know database"],
-    response: "Yes, he works with both SQL (MySQL, PostgreSQL) and no-SQL/Real-time solutions like **Supabase**."
+    keywords: ["does he know database", "sql skills", "mysql postgres"],
+    response: "Yes, he works with both SQL (**MySQL**, **PostgreSQL**) and modern cloud solutions like **Supabase** for real-time data management."
   },
   {
     keywords: ["does he know git", "github profile"],
@@ -454,8 +498,8 @@ export const chatbotData: QuickResponse[] = [
     response: "He studies at **LPU**, one of the prominent private technical universities in India."
   },
   {
-    keywords: ["technical stack summary"],
-    response: "Summary: **Python/C++**, **React/Next.js**, **Node/Express**, **Postgres/Supabase**, **Automation Anywhere/n8n**."
+    keywords: ["technical stack summary", "tech stack list"],
+    response: "Summary: **Python**, **C/C++**, **Java**, **TypeScript/React/Next.js**, **Node/Express**, **PostgreSQL/Supabase**, and **Docker** for containerization."
   },
   {
     keywords: ["expertise", "specialize", "focus"],
@@ -470,8 +514,8 @@ export const chatbotData: QuickResponse[] = [
     response: "His track record of projects and certifications shows a high level of dedication and hard work. 🚀"
   },
   {
-    keywords: ["can he use docker"],
-    response: "Yes, he uses **Docker** for containerizing applications and ensuring consistent development environments."
+    keywords: ["can he use docker", "containerization skills"],
+    response: "Yes, he uses **Docker** for containerizing applications, ensuring consistent environments across development and production."
   },
   {
     keywords: ["is he good at math"],
