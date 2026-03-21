@@ -111,13 +111,15 @@ export const AIChatBot = () => {
       return `He is currently pursuing his **B.Tech in CSE** at ${edu.institution}. He's been consistently active in technical societies and coding contests since his first year!`;
     }
 
-    if (q.includes("certificat") || q.includes("infosys") || q.includes("udemy") || q.includes("genai")) {
-      const certs = portfolioData.certificates.map(c => `• ${c.title} (${c.issuer})`).join("\n");
-      return `He's a lifelong learner with key certifications in:\n\n${certs}\n\nHe recently completed an advanced course on **Build Generative AI Apps** with No-Code tools!`;
+    if (q.includes("certificat") || q.includes("infosys") || q.includes("udemy") || q.includes("genai") || q.includes("google") || q.includes("ibm")) {
+      const pythonCert = portfolioData.certificates.find(c => c.title.includes("Python"));
+      const networkCerts = portfolioData.certificates.filter(c => c.title.includes("Network") || c.title.includes("Packet"));
+      
+      return `Tanmay is highly certified across multiple domains! 📜\n\n• **Main Achievement**: Scored a **98% Grade** in Google's **Crash Course on Python**.\n• **Networking**: Completed multiple courses from **Google** and **University of Colorado** on Packet Switching and Network Communication.\n• **Systems & OS**: Certified by **IBM** in Hardware/OS and **Barcelona** in Digital Systems.\n• **Generative AI**: Specialized in ChatGPT-4 Prompt Engineering and No-Code GenAI tools.\n\nHe currently holds over 10+ professional certifications!`;
     }
 
-    if (q.includes("achievement") || q.includes("awards") || q.includes("win")) {
-      return `Tanmay's key achievements include:\n\n• **Algorithmic Excellence**: Advanced problem-solving at LPU.\n• **Competitive Programming**: Active participant in tech contests.\n• **Project Innovation**: Award-worthy builds in ML and Web.`;
+    if (q.includes("achievement") || q.includes("awards") || q.includes("win") || q.includes("hackathon")) {
+      return `Tanmay recently achieved a major milestone: **3rd Position** in a college-level **Cyber Security Hackathon**! 🏆\n\nOther notable achievements include:\n• **Algorithmic Excellence**: Advanced problem-solving skills recognized at LPU.\n• **Competitive Programming**: Consistent participation in technical contests.\n• **Project Innovation**: Building high-impact solutions in ML and Web.`;
     }
 
     if (q.includes("contact") || q.includes("hired") || q.includes("hire") || q.includes("email") || q.includes("linkedin")) {

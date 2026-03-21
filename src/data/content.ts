@@ -133,6 +133,42 @@ export const portfolioData: PortfolioData = {
   ],
   certificates: [
     {
+      title: "Crash Course on Python",
+      issuer: "Google (Coursera)",
+      date: "March 2024",
+      imageUrl: "/certificates/python-crash-course.png",
+    },
+    {
+      title: "Digital Systems: From Logic Gates to Processors",
+      issuer: "Universitat Autònoma de Barcelona",
+      date: "2024",
+      imageUrl: "/certificates/digital-systems.png",
+    },
+    {
+      title: "Introduction to Hardware and Operating Systems",
+      issuer: "IBM",
+      date: "2024",
+      imageUrl: "/certificates/hardware-os-intro.png",
+    },
+    {
+      title: "Packet Switching Networks and Algorithms",
+      issuer: "University of Colorado System",
+      date: "2024",
+      imageUrl: "/certificates/packet-switching.png",
+    },
+    {
+      title: "The Bits and Bytes of Computer Networking",
+      issuer: "Google",
+      date: "2024",
+      imageUrl: "/certificates/google-networking.png",
+    },
+    {
+      title: "Fundamentals of Network Communication",
+      issuer: "University of Colorado System",
+      date: "2024",
+      imageUrl: "/certificates/network-communication-fundamentals.png",
+    },
+    {
       title: "ChatGPT-4 Prompt Engineering",
       issuer: "Infosys Springboard",
       date: "August 2025",
@@ -167,6 +203,11 @@ export const portfolioData: PortfolioData = {
       title: "Project Innovation",
       description: "Built multiple academic and personal projects in Machine Learning and Web Development, applying practical knowledge of Python, Flask, and APIs.",
       date: "Since Nov 2024",
+    },
+    {
+      title: "Cyber Security Hackathon",
+      description: "Secured 3rd position in a college-level Cyber Security Hackathon, demonstrating skills in vulnerability assessment and network security.",
+      date: "Feb 2025",
     },
     {
       title: "Competitive Programming",
