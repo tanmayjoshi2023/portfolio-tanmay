@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Bot, User, Sparkles } from "lucide-react";
 import { portfolioData } from "@/data/content";
+import { chatbotData } from "@/data/chatbot-data";
 
 type Message = {
   role: "user" | "bot";
@@ -11,10 +12,10 @@ type Message = {
 };
 
 const QUICK_QUESTIONS = [
+  "What is your ML expertise?",
   "Tell me about TrendPulse.",
-  "How does your Deadlock Detection work?",
-  "What is your primary expertise?",
-  "Tell me about your IVR Analytics project.",
+  "What automation tools do you use?",
+  "Tell me about your achievements.",
   "How can I hire you?",
 ];
 
@@ -23,7 +24,7 @@ export const AIChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "bot",
-      content: `Hi there! 👋 I'm Tanmay's digital twin. I know everything about his career, projects, and skills. What would you like to know?`,
+      content: `Hi there! 👋 I'm Tanmay's digital assistant. I know all about his expertise in **Machine Learning** and his passion for building **Full Stack applications**. What would you like to know?`,
     },
   ]);
   const [input, setInput] = useState("");
@@ -50,91 +51,42 @@ export const AIChatBot = () => {
       const botMessage: Message = { role: "bot", content: response };
       setMessages((prev) => [...prev, botMessage]);
       setIsTyping(false);
-    }, 1200);
+    }, 1000);
   };
 
   const generateResponse = (query: string): string => {
     const q = query.toLowerCase();
+    
+    // Find the best match based on keyword count
+    let bestMatch = { response: "", score: 0 };
 
-    // 1. Specific Project Deep Dives (Highest Priority)
-    if (q.includes("trendpulse") || q.includes("trend") || q.includes("pulse")) {
-      return `**TrendPulse** is a real-time data visualization platform, much like Google Insights! 📈\n\nIt tracks worldwide trending searches and provides interactive charts to compare popularity across regions.\n\n• **Core Tech**: React, Next.js, and Recharts.\n• **Key Feature**: Dynamic regional filtering and real-time data updates.`;
-    }
-
-    if (q.includes("deadlock") || q.includes("operating system") || q.includes("detect")) {
-      return `The **Computer Deadlock Detection System** is an OS-level simulation tool. 🛡️\n\nIt implements the **Banker's Algorithm** and **Wait-for-Graph analysis** to identify and resolve resource deadlocks visually.\n\n• **Tech**: Python & OS Simulation Logic.\n• **Impact**: Helps students and developers visualize process state management and resource allocation.`;
-    }
-
-    if (q.includes("ivr") || q.includes("call") || q.includes("transcript")) {
-      return `The **IVR Call Transcript and Analytical System** is one of Tanmay's most advanced projects! 📞\n\nHe built an NLP pipeline to convert transcripts into actionable insights using **BERT, spaCy, and NLTK**.\n\n• **Dashboard**: Built with React for real-time visualization of customer issues.\n• **Goal**: Automate issue extraction from high-volume recordings.`;
-    }
-
-    if (q.includes("sentiment") || q.includes("social media") || q.includes("election")) {
-      return `His **Sentiment Analysis** project was used for electoral forecasting! 🗳️\n\nIt analyzed vast social media public sentiment and achieved a staggering **99.94% accuracy** using a Logistic Regression model.\n\n• **Methods**: VADER & TF-IDF vectorization.`;
-    }
-
-    if (q.includes("scr") || q.includes("powerplant") || q.includes("nox")) {
-      return `The **SCR Efficiency** project focused on IoT and industrial optimization. 🏭\n\nIt used advanced data structures like **Heaps and Tries** to reduce scheduling conflicts and monitor NOx emissions in real-time.`;
-    }
-
-    // 2. Specific Technology & Library Handlers (Requested by User)
-    if (q.includes("full stack") || q.includes("web development") || q.includes("frontend") || q.includes("backend")) {
-      return `For **Full Stack development**, Tanmay is proficient in:\n\n• **Frontend**: React, Next.js, TypeScript, Tailwind CSS, and Framer Motion.\n• **Backend**: Node.js, Express, and RESTful APIs.\n• **Databases**: Supabase, MySQL, and PostgreSQL.\n\nHe loves building responsive, premium-feel UIs with robust backends! 💻`;
-    }
-
-    if (q.includes("machine") || q.includes("ml") || q.includes("modeling")) {
-      return `In the **Machine Learning** domain, Tanmay has worked extensively with:\n\n• **Data Processing**: NumPy and Pandas.\n• **Visualization**: Matplotlib and Seaborn.\n• **Modeling**: Scikit-Learn (Logistic Regression, SVM, Random Forest).\n• **Platforms**: Kaggle and Jupyter Notebooks.`;
-    }
-
-    if (q.includes("nlp") || q.includes("natural language") || q.includes("text") || q.includes("bert")) {
-      return `Tanmay is a specialist in **Natural Language Processing (NLP)**. 📝\n\nHis toolkit includes:\n• **Deep Learning**: BERT (Bidirectional Encoder Representations from Transformers).\n• **Core Processing**: spaCy, NLTK, and TextBlob.\n• **Techniques**: TF-IDF, Topic Modeling, and VADER Sentiment Analysis.`;
-    }
-
-    // 3. General Categories (Skills, Education, etc.)
-    if (q.includes("expertise") || q.includes("specialize") || q.includes("focus")) {
-      return "Tanmay specializes in **Full Stack Development** with a heavy focus on **AI and Machine Learning**. He excels at bridging the gap between complex data models and beautiful, user-centric web interfaces.";
-    }
-
-    if (q.includes("skill") || q.includes("tech") || q.includes("language") || q.includes("stack")) {
-      const skills = portfolioData.skills
-        .map((s) => `• **${s.name}**: ${s.skills.join(", ")}`)
-        .join("\n");
-      return `Tanmay has a diverse tech stack:\n\n${skills}\n\nHe's particularly strong in **Python** and **React**!`;
-    }
-
-    if (q.includes("education") || q.includes("university") || q.includes("college") || q.includes("cgpa") || q.includes("school")) {
-      const edu = portfolioData.education[0];
-      const school = portfolioData.education[1];
-      if (q.includes("cgpa") || q.includes("grade") || q.includes("percentage")) {
-        return `Tanmay maintains a solid academic record: a **${edu.details}** in his current B.Tech (LPU), and he secured **${school.details}** in his Intermediate exams at Beersheba.`;
+    for (const item of chatbotData) {
+      let currentScore = 0;
+      for (const keyword of item.keywords) {
+        if (q.includes(keyword.toLowerCase())) {
+          currentScore += 1;
+        }
       }
-      return `He is currently pursuing his **B.Tech in CSE** at ${edu.institution}. He's been consistently active in technical societies and coding contests since his first year!`;
+
+      if (currentScore > bestMatch.score) {
+        bestMatch = { response: item.response, score: currentScore };
+      }
     }
 
-    if (q.includes("certificat") || q.includes("infosys") || q.includes("udemy") || q.includes("genai") || q.includes("google") || q.includes("ibm")) {
-      const pythonCert = portfolioData.certificates.find(c => c.title.includes("Python"));
-      const networkCerts = portfolioData.certificates.filter(c => c.title.includes("Network") || c.title.includes("Packet"));
-      
-      return `Tanmay is highly certified across multiple domains! 📜\n\n• **Main Achievement**: Scored a **98% Grade** in Google's **Crash Course on Python**.\n• **Networking**: Completed multiple courses from **Google** and **University of Colorado** on Packet Switching and Network Communication.\n• **Systems & OS**: Certified by **IBM** in Hardware/OS and **Barcelona** in Digital Systems.\n• **Generative AI**: Specialized in ChatGPT-4 Prompt Engineering and No-Code GenAI tools.\n\nHe currently holds over 10+ professional certifications!`;
+    if (bestMatch.score > 0) {
+      return bestMatch.response;
     }
 
-    if (q.includes("achievement") || q.includes("awards") || q.includes("win") || q.includes("hackathon")) {
-      return `Tanmay recently achieved a major milestone: **3rd Position** in a college-level **Cyber Security Hackathon**! 🏆\n\nOther notable achievements include:\n• **Algorithmic Excellence**: Advanced problem-solving skills recognized at LPU.\n• **Competitive Programming**: Consistent participation in technical contests.\n• **Project Innovation**: Building high-impact solutions in ML and Web.`;
-    }
-
-    if (q.includes("contact") || q.includes("hired") || q.includes("hire") || q.includes("email") || q.includes("linkedin")) {
-      return `Ready to collaborate? Reach out here:\n\n📧 **Email**: ${portfolioData.contact.email}\n🔗 **LinkedIn**: [joshitanmay1618](${portfolioData.contact.linkedin})\n🐙 **GitHub**: [tanmayjoshi2023](${portfolioData.contact.github})\n\nHe is currently open to internship and full-time opportunities! 🚀`;
-    }
-
+    // Secondary Check: Specific keywords in a more granular way if no direct match
     if (q.includes("who are you") || q.includes("about") || q.includes("tanmay")) {
-      return `${portfolioData.summary}\n\nIn short: code, coffee, and AI! 🚀`;
+      return `${portfolioData.summary}\n\nIn short: high-impact code, smart AI, and efficient automation! 🚀`;
     }
 
     if (q.includes("hello") || q.includes("hi") || q.includes("hey")) {
       return "Hello! I'm Tanmay's AI Assistant. 👋 How can I help you explore his projects or technical expertise today?";
     }
 
-    return "That's an interesting question! While I don't have a specific answer for that yet, I can tell you all about Tanmay's projects in **NLP**, **Full Stack Development**, or his **University achievements**. What would you like to see?";
+    return "That's an interesting question! While I don't have a specific answer for that yet, I can tell you all about Tanmay's projects in **NLP**, **Machine Learning (Supervised/Unsupervised/RL)**, or his **Automation** work. What would you like to see?";
   };
 
   return (

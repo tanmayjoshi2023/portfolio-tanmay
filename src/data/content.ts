@@ -54,8 +54,8 @@ export type PortfolioData = {
 
 export const portfolioData: PortfolioData = {
   name: "Tanmay Joshi",
-  role: "Full Stack Developer",
-  summary: "A passionate software developer with expertise in AI, Machine Learning, and Web Technologies. Experienced in building NLP pipelines, predictive models, and interactive web applications using React and Node.js.",
+  role: "Machine Learning Engineer",
+  summary: "A specialized Machine Learning Engineer with a deep passion for building intelligent systems. While my heart lies in AI and ML, I am equally enthusiastic about crafting seamless Full Stack web applications that bring complex models to life.",
   profileImage: "/profile.jpg",
   cvUrl: "/cv.docx",
   contact: {
@@ -70,12 +70,16 @@ export const portfolioData: PortfolioData = {
       skills: ["C", "C++", "Java", "Python", "JavaScript", "TypeScript"],
     },
     {
-      name: "Libraries & Frameworks",
-      skills: ["React", "Next.js", "Node.js", "NumPy", "Pandas", "Matplotlib", "Scikit-learn", "BERT", "Spacy", "NLTK"],
+      name: "Machine Learning Expertise",
+      skills: ["Supervised Learning (Regression, Classification)", "Unsupervised Learning (Clustering, PCA)", "Reinforcement Learning", "NLP (BERT, NLTK, spaCy)", "Computer Vision Basics", "TF-IDF & VADER"],
     },
     {
-      name: "Tools & Platforms",
-      skills: ["Git", "GitHub", "Docker", "VS Code", "Kaggle", "Supabase"],
+      name: "Libraries & Frameworks",
+      skills: ["React", "Next.js", "Node.js", "NumPy", "Pandas", "Matplotlib", "Scikit-learn", "Express", "Framer Motion"],
+    },
+    {
+      name: "Tools & Automation",
+      skills: ["Automation Anywhere", "n8n", "Docker", "Git", "GitHub", "VS Code", "Kaggle", "Supabase", "Postman"],
     },
     {
       name: "Backend",
@@ -87,7 +91,7 @@ export const portfolioData: PortfolioData = {
       title: "IVR Call Transcript and Issue Analytical System",
       description: {
         problem: "Extracting actionable insights from high volumes of IVR call recordings manually was time-consuming and prone to error.",
-        solution: "Built an NLP pipeline to convert recordings to transcripts and extract customer issues using spaCy, BERT, and NLTK. Integrated with a React dashboard for real-time visualization.",
+        solution: "Built a sophisticated NLP pipeline to automate the extraction of actionable insights from high volumes of IVR call recordings. The system first converts audio into precise transcripts and then identifies core customer issues using a combination of BERT for semantic understanding, spaCy for entity extraction, and NLTK for text processing. This automation eliminates the bottleneck of manual call analysis, providing data-driven insights through a dynamic React dashboard integrated with Supabase. It serves as a powerful end-to-end solution for industrial-scale communication and issue tracking, significantly improving operational efficiency and service quality.",
       },
       techStack: ["Node.js", "React", "Supabase", "BERT", "NLTK", "spaCy"],
       githubUrl: "https://github.com/tanmayjoshi2023",
@@ -97,7 +101,7 @@ export const portfolioData: PortfolioData = {
       title: "Sentiment Analysis of Social Media",
       description: {
         problem: "Need for real-time electoral forecasting by analyzing vast amounts of public sentiment on social media.",
-        solution: "Developed a machine learning system using VADER and TF-IDF to predict election outcomes. Achieved 99.94% accuracy with Logistic Regression.",
+        solution: "Developed a robust machine learning system designed for real-time electoral forecasting by analyzing vast amounts of public sentiment on social media. By utilizing VADER for specialized sentiment scoring and TF-IDF for high-dimensional feature extraction, the model achieved a remarkable 99.94% accuracy with Logistic Regression. The system processes unstructured digital discourse at scale, identifying subtle shifts in societal opinion across different demographics and regions. This project demonstrates the power of combining traditional NLP techniques with modern classification models to derive predictive intelligence from complex social media data streams.",
       },
       techStack: ["Python", "VADER", "TF-IDF", "Scikit-learn", "Logistic Regression"],
       githubUrl: "https://github.com/tanmayjoshi2023",
@@ -106,7 +110,7 @@ export const portfolioData: PortfolioData = {
       title: "TrendPulse",
       description: {
         problem: "Users often find it difficult to track and compare real-time global search trends across different regions and categories.",
-        solution: "Developed a real-time data visualization platform that tracks worldwide trending searches. Implemented dynamic charts and regional filtering to provide insights similar to Google Trends, making search data accessible and interactive.",
+        solution: "TrendPulse is a real-time data visualization platform that demystifies global search patterns. Built with Next.js for high performance and Recharts for interactive visualization, it allows users to track and compare trending topics across different geographic regions and categories. Much like Google Trends, the platform provides actionable insights through dynamic charts and regional filtering, making complex search data accessible and intuitive. The premium interface, styled with Tailwind CSS, ensures a seamless user experience while handling intensive real-time data fetching, making it an essential tool for understanding global shifts in public interest.",
       },
       techStack: ["React", "Next.js", "Tailwind CSS", "Recharts", "Lucide Icons"],
       githubUrl: "https://github.com/tanmayjoshi2023",
@@ -116,7 +120,7 @@ export const portfolioData: PortfolioData = {
       title: "Computer Deadlock Detection System",
       description: {
         problem: "Deadlocks in multi-process Operating Systems can stall resources and crash environments if not detected and resolved early.",
-        solution: "Designed and implemented a simulation tool for Deadlock Detection using the Banker's Algorithm and Wait-for-Graph analysis. The system provides visual feedback on resource allocation and process states to prevent system-wide freezes.",
+        solution: "Designed and implemented a visual simulation tool to detect and resolve critical failures in multi-process Operating Systems. Using the Banker's Algorithm and Wait-for-Graph analysis, the system identifies circular waits and unsafe states that lead to system-wide stalls. Developed in Python, the tool provides immediate visual feedback on process resource allocation, helping students and developers understand process states and resource synchronization. It serves as Both an educational platform and a reliable debugging utility for complex OS architectures, ensuring that resource stalls are detected and resolved before they impact system stability.",
       },
       techStack: ["Python", "OS Algorithms", "Resource Management", "Data Structures"],
       githubUrl: "https://github.com/tanmayjoshi2023",
@@ -125,7 +129,7 @@ export const portfolioData: PortfolioData = {
       title: "SCR Efficiency in Powerplants",
       description: {
         problem: "Managing and monitoring NOx emissions in power plants required a dynamic, real-time solution.",
-        solution: "Implemented an IoT-based system using advanced data structures (Heaps, Tries) to optimize scheduling and reduce conflicts by 40%.",
+        solution: "Implemented an IoT-based monitoring system focusing on industrial optimization and environmental compliance in power plants. By leveraging advanced data structures like Heaps for priority-based task scheduling and Tries for efficient indexing of large datasets, the system successfully reduced operational conflicts by 40%. The platform provides dynamic, real-time tracking of NOx emissions, bridging the gap between low-level sensor data and high-level industrial management. This solution ensures that emission targets are met consistently while optimizing the selective catalytic reduction (SCR) process, demonstrating the intersection of Data Structures, IoT, and environmental engineering.",
       },
       techStack: ["JavaScript", "HTML5", "CSS3", "IoT", "Data Structures"],
       githubUrl: "https://github.com/tanmayjoshi2023",
@@ -136,7 +140,7 @@ export const portfolioData: PortfolioData = {
       title: "Crash Course on Python",
       issuer: "Google (Coursera)",
       date: "March 2024",
-      imageUrl: "/certificates/python-crash-course.png",
+      imageUrl: "/certificates/python-crash-course.jpg",
     },
     {
       title: "Digital Systems: From Logic Gates to Processors",

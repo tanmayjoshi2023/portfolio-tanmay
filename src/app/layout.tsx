@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tanmay Joshi | Full Stack Developer",
-  description: "Professional portfolio of Tanmay Joshi, a Software Developer specializing in AI, Machine Learning, and Web Technologies.",
+  title: "Tanmay Joshi | Machine Learning Engineer",
+  description: "Portfolio of Tanmay Joshi - Machine Learning Engineer & Full Stack Enthusiast specializing in AI, NLP, and Automation.",
 };
 
 export default function RootLayout({

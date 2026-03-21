@@ -15,16 +15,16 @@ export default function Hero() {
         >
           {portfolioData.profileImage && (
             <div className="mb-12 flex justify-center">
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.05, rotate: 2 }}
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
                 className="relative w-72 h-72 md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-8 border-accent/10 p-3 bg-gradient-to-tr from-accent/20 to-transparent shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] dark:shadow-[0_0_80px_-20px_rgba(59,130,246,0.4)]"
               >
                 <div className="w-full h-full rounded-full bg-card/50 backdrop-blur-sm flex items-center justify-center overflow-hidden border-4 border-white/20 dark:border-white/5">
-                  <img 
-                    src={portfolioData.profileImage} 
+                  <img
+                    src={portfolioData.profileImage}
                     alt={portfolioData.name}
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(portfolioData.name)}&background=2563EB&color=fff&size=512`;
                     }}
