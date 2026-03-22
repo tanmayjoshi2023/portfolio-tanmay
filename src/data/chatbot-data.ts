@@ -122,11 +122,11 @@ export const chatbotData: QuickResponse[] = [
 
   // MACHINE LEARNING - NLP
   {
-    keywords: ["nlp skillset", "natural language processing skills"],
+    keywords: ["nlp skillset", "natural language processing skills", "nlp skills", "nlp"],
     response: "Tanmay's **NLP** specialty includes:\n\n• **Models**: BERT, Transformer architectures.\n• **Libraries**: spaCy, NLTK, TextBlob.\n• **Tasks**: Sentiment analysis, POS tagging, Named Entity Recognition (NER)."
   },
   {
-    keywords: ["bert project", "transformer experience"],
+    keywords: ["bert project", "transformer experience", "bert", "transforer"],
     response: "He integrated **BERT** into his IVR Analytical System to provide deep semantic understanding of call transcripts."
   },
   {
@@ -154,11 +154,11 @@ export const chatbotData: QuickResponse[] = [
 
   // TECHNICAL SKILLS - Languages
   {
-    keywords: ["programming languages", "coding languages", "what languages do you know"],
+    keywords: ["programming languages", "coding languages", "what languages do you know", "coding", "language"],
     response: "Tanmay is proficient in a wide range of languages including **Python**, **C++**, **Java**, **C**, **JavaScript**, and **TypeScript**. 💻"
   },
   {
-    keywords: ["python expert", "experience in python", "python score"],
+    keywords: ["python expert", "experience in python", "python score", "python"],
     response: "Python is his primary language for AI and ML. He scored a **98% Grade** in Google's Python Crash Course! 🐍"
   },
   {
@@ -364,15 +364,15 @@ export const chatbotData: QuickResponse[] = [
     response: "Tanmay has always been a strong student, maintaining consistent performance through school and university."
   },
   {
-    keywords: ["what tech does he use for nlp"],
+    keywords: ["what tech does he use for nlp", "nlp tech"],
     response: "For NLP, he primarily uses **Python** with libraries like **BERT**, **spaCy**, **NLTK**, **TF-IDF** and **VADER**."
   },
   {
-    keywords: ["does he know react"],
+    keywords: ["does he know react", "react"],
     response: "Yes, **React** is his primary frontend framework. He uses it for building high-performance, interactive web apps like this trendpulse etc!"
   },
   {
-    keywords: ["does he know nextjs"],
+    keywords: ["does he know nextjs", "nextjs"],
     response: "Yes, he's proficient in **Next.js**, using it for SEO-optimized and server-rendered web applications."
   },
   {
@@ -400,11 +400,11 @@ export const chatbotData: QuickResponse[] = [
     response: "Yes, he is very comfortable with **Git** and **GitHub** for version control and collaboration."
   },
   {
-    keywords: ["is he a student"],
+    keywords: ["is he a student", "what do he do right now"],
     response: "Yes, he is a dedicated student at **Lovely Professional University**, currently in his B.Tech program."
   },
   {
-    keywords: ["is he a freelancer"],
+    keywords: ["is he a freelancer", "freelancer"],
     response: "Yes Tanmay is a Part time Freelancer, always open to opportunities in various fields.He has worked on many personal and academic projects and is now looking for professional opportunities to apply his skills."
   },
   {
@@ -486,7 +486,7 @@ export const chatbotData: QuickResponse[] = [
     response: "He leverages **Automation Anywhere** for enterprise-scale robotic process automation."
   },
   {
-    keywords: ["is he in india"],
+    keywords: ["is he in india", "India"],
     response: "Yes, he is based in India."
   },
   {
@@ -494,7 +494,7 @@ export const chatbotData: QuickResponse[] = [
     response: "He studies at **LPU**, one of the prominent private technical universities in India."
   },
   {
-    keywords: ["technical stack summary", "tech stack list"],
+    keywords: ["technical stack summary", "tech stack list", "what techs do he knows"],
     response: "Summary: **Python**, **C/C++**, **Java**, **TypeScript/React/Next.js**, **Node/Express**, **PostgreSQL/Supabase**, and **Docker** for containerization."
   },
   {
@@ -502,7 +502,7 @@ export const chatbotData: QuickResponse[] = [
     response: "Tanmay specializes in **Machine Learning**, including Supervised, Unsupervised, and Reinforcement Learning. He is also a passionate Full Stack Enthusiast who builds web applications to deploy his intelligent models."
   },
   {
-    keywords: ["frontend vs backend"],
+    keywords: ["frontend vs backend", "web Dev", " web development"],
     response: "Tanmay is comfortable with both! He enjoys crafting beautiful UIs on the frontend and building robust systems on the backend."
   },
   {
@@ -518,11 +518,11 @@ export const chatbotData: QuickResponse[] = [
     response: "His work in ML and competitive programming requires strong mathematical foundations, especially in statistics and linear algebra."
   },
   {
-    keywords: ["does he know cloud"],
+    keywords: ["does he know cloud", "what cloud tech do he knows"],
     response: "He has experience using **Supabase** (BaaS) and has a general understanding of cloud infrastructure."
   },
   {
-    keywords: ["mobile app development"],
+    keywords: ["mobile app development", "type of developmet he knows"],
     response: "He primarily focuses on **Responsive Web Development**, which ensures high performance on mobile devices."
   },
   {
@@ -530,23 +530,23 @@ export const chatbotData: QuickResponse[] = [
     response: "He has a deep interest in **DSA** and practices regularly to improve his algorithmic efficiency."
   },
   {
-    keywords: ["os algorithms experience"],
+    keywords: ["os algorithms experience", "os"],
     response: "Through his Deadlock Detection project, he has practical experience implementing complex OS algorithms."
   },
   {
-    keywords: ["networking basics"],
+    keywords: ["networking basics", "networking"],
     response: "Yes, he holds multiple certifications in **Computer Networking** and understands core protocols and packet switching."
   },
   {
-    keywords: ["generative ai tools"],
+    keywords: ["generative ai tools", "gen ai", " gen ai tools"],
     response: "He's familiar with **ChatGPT-4 Prompt Engineering** and various no-code GenAI platforms."
   },
   {
-    keywords: ["can he optimize logic"],
+    keywords: ["can he optimize logic", "logic building"],
     response: "Yes, his achievement in 'Algorithmic Excellence' highlights his ability to optimize code for time and space complexity."
   },
   {
-    keywords: ["does he use tailwind"],
+    keywords: ["does he use tailwind", "tailwind css"],
     response: "Yes! This portfolio was styled using **Tailwind CSS** for a modern, sleek look."
   },
   {
@@ -554,11 +554,11 @@ export const chatbotData: QuickResponse[] = [
     response: "While he prefers **Tailwind**, he has a solid understanding of modern CSS and styling frameworks."
   },
   {
-    keywords: ["how to contact for hire"],
+    keywords: ["how to contact for hire", "contact", "colab", "hire"],
     response: "Please email him at **tanmayjoshi043@gmail.com** for any professional inquiries."
   },
   {
-    keywords: ["where can i see his code"],
+    keywords: ["where can i see his code", "github"],
     response: "You can find his source code for most projects on his **GitHub: [tanmayjoshi2023](https://github.com/tanmayjoshi2023)**."
   },
   {
@@ -575,7 +575,7 @@ export const chatbotData: QuickResponse[] = [
   },
   {
     keywords: ["did he win hackathons"],
-    response: "Yes, he secured **3rd place** in a Cyber Security Hackathon."
+    response: "Yes, he secured **3rd place** in a Cyber Security Hackathon in a college level Hackathon .Lovely Professional University."
   },
   {
     keywords: ["what university"],
@@ -587,22 +587,22 @@ export const chatbotData: QuickResponse[] = [
   },
   {
     keywords: ["favorite subject"],
-    response: "Artificial Intelligence and OS are among his favorites!"
+    response: "Artificial Intelligence, OS , networking, electronics, and DSA are among his favorites!"
   },
   {
     keywords: ["how to hire as intern"],
     response: "You can reach out via LinkedIn or Email. He is highly motivated and ready to contribute to a professional team."
   },
   {
-    keywords: ["is he a full stack dev"],
+    keywords: ["is he a full stack dev", "full stack",],
     response: "Tanmay is primarily a **Machine Learning Engineer** who is also a highly passionate **Full Stack Enthusiast**. He specializes in building intelligent systems and then crafting the full-stack web applications needed to deploy and visualize those models."
   },
   {
-    keywords: ["is he proficient in java"],
+    keywords: ["is he proficient in java", "java", "do he knows java"],
     response: "Yes, he has academic and project experience in Java."
   },
   {
-    keywords: ["is he proficient in c++"],
+    keywords: ["is he proficient in c++", "do he knows c++", "do he knows cpp"],
     response: "Yes, he uses C++ regularly for competitive programming."
   },
   {
@@ -627,15 +627,15 @@ export const chatbotData: QuickResponse[] = [
   },
   {
     keywords: ["can i call him"],
-    response: "You can reach him at **+91-7452986606** during business hours."
+    response: "You can reach him at **+91-7452986606**."
   },
   {
-    keywords: ["cv location"],
+    keywords: ["cv location", "cv download"],
     response: "Look for the 'Download CV' button on the main page!"
   },
   {
-    keywords: ["certificates issuer"],
-    response: "Google, IBM, Infosys, Udemy, and University of Colorado."
+    keywords: ["certificates issuer", "where have he done certificates from"],
+    response: "He have done various certificates issued by Google, IBM, Infosys, Udemy, and University of Colorado."
   },
   {
     keywords: ["no code ai tools"],
@@ -670,7 +670,7 @@ export const chatbotData: QuickResponse[] = [
     response: "AI developers like Tanmay can help businesses automate mundane tasks and derive insights from vast amounts of data."
   },
   {
-    keywords: ["is he a good choice for startups"],
+    keywords: ["is he a good choice for startups", "startups"],
     response: "Yes! His full-stack skills and ability to build end-to-end AI solutions make him a perfect fit for fast-moving startups."
   },
   {
@@ -754,7 +754,7 @@ export const chatbotData: QuickResponse[] = [
     response: "LPU is highly regarded for its engineering programs and technical focus in India."
   },
   {
-    keywords: ["where can i contact"],
+    keywords: ["where can i contact", "can you share me his contacts"],
     response: "Email: tanmayjoshi043@gmail.com | Mobile: +91-7452986606"
   },
   {
@@ -815,10 +815,10 @@ export const chatbotData: QuickResponse[] = [
   },
   {
     keywords: ["is he active in community"],
-    response: "He is active in technical societies at LPU and contributes to coding contests."
+    response: "He is active in technical and non technical societies at LPU and contributes enthusiastically in all societies."
   },
   {
-    keywords: ["is he a good colleague"],
+    keywords: ["is he a good colleague", "team work", "team player"],
     response: "Given his collaborative success in hackathons, he is a great teammate who values open communication."
   },
   {
@@ -835,18 +835,18 @@ export const chatbotData: QuickResponse[] = [
   },
   {
     keywords: ["is he available to talk now"],
-    response: "The best way is to email him; he'll respond as soon as possible!"
+    response: "The best way is to email him at tanmayjoshi043@gmail.com or either Whatsapp at +91-7452986606; he'll respond as soon as possible!"
   },
   {
     keywords: ["can he work in us time zone"],
     response: "He is flexible and can adjust his schedule for international collaboration."
   },
   {
-    keywords: ["does he use vscode"],
+    keywords: ["does he use vscode", "vs code"],
     response: "Yes, **VS Code** is his primary IDE for all development work."
   },
   {
-    keywords: ["does he use kaggle"],
+    keywords: ["does he use kaggle", "kaggle"],
     response: "Yes, he uses **Kaggle** for exploring datasets and competing in ML challenges."
   },
   {
@@ -878,15 +878,15 @@ export const chatbotData: QuickResponse[] = [
     response: "Yes, his work in NLP, sentiment analysis, and various ML domains highlights his AI specialization."
   },
   {
-    keywords: ["how to see certificates gallery"],
+    keywords: ["how to see certificates gallery", "tell me about your certificates"],
     response: "Head over to the 'Certificates' section on the main page to see them all!"
   },
   {
-    keywords: ["project showcase"],
+    keywords: ["project showcase", "tell me about your projects"],
     response: "You can see all his top projects in the 'Projects' section, complete with descriptions and tech stacks."
   },
   {
-    keywords: ["graduation status"],
+    keywords: ["graduation status", "tell me about your graduation"],
     response: "He is currently a student at LPU, building his career through academic and project work."
   },
   {
@@ -914,7 +914,7 @@ export const chatbotData: QuickResponse[] = [
     response: "Yes! His IVR Analytics and TrendPulse projects both feature advanced interactive dashboards."
   },
   {
-    keywords: ["is he ready for hire"],
+    keywords: ["is he ready for hire", "looking for opportunities"],
     response: "Yes, he's ready to bring his AI and Web skills to your team! 🚀"
   }
 ];
