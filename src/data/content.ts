@@ -230,7 +230,13 @@ export const portfolioData: PortfolioData = {
       institution: "Beersheba Senior Secondary School",
       degree: "Intermediate - PCM + CS",
       period: "Apr 2022 - Mar 2023",
-      details: "Percentage: 82%",
+      details: "Percentage: 75%",
+    },
+    {
+      institution: "Beersheba Senior Secondary School",
+      degree: "High School",
+      period: "Apr 2020 - Mar 2021",
+      details: "Percentage: 79%",
     },
   ],
 };

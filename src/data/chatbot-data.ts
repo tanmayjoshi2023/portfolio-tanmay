@@ -200,16 +200,12 @@ export const chatbotData: QuickResponse[] = [
 
   // EDUCATION
   {
-    keywords: ["education", "university", "college", "lpu"],
-    response: "Tanmay is currently pursuing a **B.Tech in Computer Science and Engineering** at **Lovely Professional University (LPU)**. 🎓"
+    keywords: ["education", "university", "college", "lpu", "where did you study", "academic background"],
+    response: "Tanmay is pursuing a **B.Tech in CSE** at **Lovely Professional University (LPU)** (CGPA: 7). He completed his schooling at **Beersheba Senior Secondary School**, scoring **75%** in Inter and **79%** in High School. 🎓"
   },
   {
-    keywords: ["cgpa", "grade", "academic performance"],
-    response: "He maintains a solid **7 CGPA** in his B.Tech program, with a strong focus on core CS subjects like OS, DBMS, and Data Structures."
-  },
-  {
-    keywords: ["schooling", "intermediate", "high school"],
-    response: "He completed his Intermediate studies at **Beersheba Senior Secondary School** with an impressive **82%**."
+    keywords: ["schooling", "intermediate", "high school", "school", "where did you go to school"],
+    response: "He completed his studies at **Beersheba Senior Secondary School**. He achieved **75%** in Intermediate and **79%** in High School."
   },
   {
     keywords: ["when will you graduate", "graduation year"],
@@ -361,7 +357,7 @@ export const chatbotData: QuickResponse[] = [
   },
   {
     keywords: ["intermediate percentage"],
-    response: "He scored **82%** in his Intermediate (PCM + CS) exams."
+    response: "He scored **75%** in his Intermediate (PCM + CS) exams."
   },
   {
     keywords: ["tenth grade", "school percentage"],
@@ -587,7 +583,7 @@ export const chatbotData: QuickResponse[] = [
   },
   {
     keywords: ["intermediate score"],
-    response: "82% in PCM + CS."
+    response: "75% in PCM + CS."
   },
   {
     keywords: ["favorite subject"],
@@ -750,8 +746,8 @@ export const chatbotData: QuickResponse[] = [
     response: "He is certified in Computational Theory, covering language principles and finite automata."
   },
   {
-    keywords: ["beersheba senior secondary school"],
-    response: "That's where Tanmay completed his intermediate schooling with 82%."
+    keywords: ["beersheba senior secondary school", "high school", "school percentage"],
+    response: "Tanmay completed his schooling at Beersheba. He scored **75%** in Intermediate and **79%** in High School."
   },
   {
     keywords: ["lovely professional university ranking"],
